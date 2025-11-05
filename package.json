@@ -20,7 +20,7 @@
   "sideEffects": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/magic-spells/responsive-video"
+    "url": "git+https://github.com/magic-spells/responsive-video.git"
   },
   "homepage": "https://github.com/magic-spells/responsive-video#readme",
   "bugs": {
