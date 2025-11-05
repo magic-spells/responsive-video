@@ -156,17 +156,6 @@ The component uses private class fields (denoted by `#`) to encapsulate state:
 </responsive-video>
 ```
 
-### Dynamic Content
-
-```javascript
-const heroVideo = document.querySelector('responsive-video');
-heroVideo.setAttribute('mobile-video', '/new-mobile-video.mp4');
-heroVideo.setAttribute('desktop-video', '/new-desktop-video.mp4');
-heroVideo.setAttribute('mobile-poster', '/new-mobile-poster.jpg');
-heroVideo.setAttribute('desktop-poster', '/new-desktop-poster.jpg');
-// Sources update on next resize event
-```
-
 ## Development
 
 Install dependencies:
