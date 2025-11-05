@@ -1,0 +1,21 @@
+# Development files
+.claude/
+demo/
+*.log
+.DS_Store
+
+# Config files
+.eslintignore
+.eslintrc*
+eslint.config.js
+.prettierignore
+.prettierrc*
+rollup.config.mjs
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (README is included by default)
+CLAUDE.md

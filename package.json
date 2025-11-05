@@ -1,0 +1,79 @@
+{
+  "name": "@magic-spells/responsive-video",
+  "version": "0.1.0",
+  "description": "Responsive video and poster image swapping web component.",
+  "author": "Cory Schulz",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/responsive-video.cjs.js",
+  "module": "dist/responsive-video.esm.js",
+  "unpkg": "dist/responsive-video.min.js",
+  "types": "src/responsive-video.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/responsive-video.d.ts",
+      "import": "./dist/responsive-video.esm.js",
+      "require": "./dist/responsive-video.cjs.js",
+      "default": "./dist/responsive-video.esm.js"
+    }
+  },
+  "sideEffects": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magic-spells/responsive-video"
+  },
+  "homepage": "https://github.com/magic-spells/responsive-video#readme",
+  "bugs": {
+    "url": "https://github.com/magic-spells/responsive-video/issues"
+  },
+  "keywords": [
+    "responsive-video",
+    "web-components",
+    "custom-elements",
+    "hero-video",
+    "video-optimization",
+    "responsive-images",
+    "poster-images",
+    "mobile-optimization",
+    "bandwidth-optimization",
+    "performance",
+    "viewport",
+    "breakpoint",
+    "no-dependencies",
+    "vanilla-js"
+  ],
+  "files": [
+    "dist/",
+    "src/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint src/ rollup.config.mjs",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build",
+    "serve": "rollup -c --watch",
+    "dev": "rollup -c --watch"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^9.38.0",
+    "globals": "^15.15.0",
+    "prettier": "^3.3.3",
+    "rollup": "^3.0.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-serve": "^1.1.1"
+  }
+}

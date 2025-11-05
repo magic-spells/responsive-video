@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Video Demo</title>
+    <script type="module" src="./responsive-video.esm.js"></script>
+    <style>
+      :root {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #0c0e14;
+        color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        gap: 24px;
+      }
+      main {
+        width: min(100%, 1200px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      responsive-video {
+        display: block;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #111827;
+      }
+      code {
+        font-family:
+          ui-monospace, SFMono-Regular, SFMono, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        background: rgba(255, 255, 255, 0.12);
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <responsive-video
+        mobile-video="https://cdn.pixabay.com/video/2025/10/04/307864_large.mp4"
+        desktop-video="https://cdn.pixabay.com/video/2023/02/25/152085-802335503_large.mp4"
+        breakpoint="768"
+      >
+        <!-- Replace the src via attributes above; leave the video element empty -->
+        <video playsinline muted loop autoplay></video>
+      </responsive-video>
+      <p
+        style="
+          text-align: center;
+          margin-top: 16px;
+          opacity: 0.7;
+          font-size: 14px;
+        "
+      >
+        Videos courtesy of
+        <a
+          href="https://pixabay.com/"
+          target="_blank"
+          rel="noopener"
+          style="color: inherit; text-decoration: underline"
+          >Pixabay</a
+        >
+      </p>
+    </main>
+  </body>
+</html>
