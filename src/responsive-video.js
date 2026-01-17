@@ -120,7 +120,7 @@ export class ResponsiveVideo extends HTMLElement {
     if (currentSrc === videoUrl) {
       this.#currentSrc = videoUrl;
       if (mode) {
-        this.dataset.activeMode = mode;
+        this.setAttribute("mode", mode);
       }
       return;
     }
@@ -146,9 +146,9 @@ export class ResponsiveVideo extends HTMLElement {
 
     this.#currentSrc = videoUrl;
     if (mode) {
-      this.dataset.activeMode = mode;
+      this.setAttribute("mode", mode);
     } else {
-      delete this.dataset.activeMode;
+      this.removeAttribute("mode");
     }
   }
 }

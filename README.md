@@ -49,7 +49,7 @@ The component automatically:
 2. Loads the appropriate video source and poster image
 3. Applies the `src` and `poster` to the child `<video>` element
 4. Re-evaluates when the window resizes
-5. Sets `data-active-mode` to "mobile" or "desktop" for styling hooks
+5. Sets `mode` attribute to "mobile" or "desktop" for styling hooks
 
 ## API
 
@@ -72,22 +72,22 @@ The component automatically:
 - If no matching video exists → component does nothing
 - The component looks for the first `<video>` element in its light DOM
 
-### Data Attributes
+### Mode Attribute
 
-The component sets `data-active-mode` on itself to indicate which source is currently active:
+The component sets a `mode` attribute on itself to indicate which source is currently active:
 
 ```html
-<responsive-video data-active-mode="mobile">...</responsive-video>
+<responsive-video mode="mobile">...</responsive-video>
 ```
 
 You can use this for conditional styling:
 
 ```css
-responsive-video[data-active-mode="mobile"] {
+responsive-video[mode="mobile"] {
   /* Mobile-specific styles */
 }
 
-responsive-video[data-active-mode="desktop"] {
+responsive-video[mode="desktop"] {
   aspect-ratio: 16/9;
 }
 ```
@@ -114,7 +114,7 @@ When the source needs to change:
 2. Updates the `poster` attribute (if a poster URL is provided for the active mode)
 3. Calls `video.load()` to initiate loading
 4. Attempts to auto-play if `video.autoplay` is true (catches and ignores errors for muted autoplay requirements)
-5. Updates `data-active-mode` to reflect the active source ("mobile" or "desktop")
+5. Updates `mode` attribute to reflect the active source ("mobile" or "desktop")
 
 ### Private Implementation Details
 

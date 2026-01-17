@@ -48,7 +48,7 @@ The entire component is defined in a single file: `src/responsive-video.js`
 - If viewport < breakpoint → `mobile-video` and `mobile-poster`
 - If `mobile-video` is missing → falls back to `desktop-video`
 - Poster attributes are optional and managed alongside video sources
-- Sets `data-active-mode` attribute to "mobile" or "desktop"
+- Sets `mode` attribute to "mobile" or "desktop"
 
 **Performance optimizations:**
 - Private `#currentSrc` field prevents redundant updates (line 100: `if (nextVideo === this.#currentSrc) return;`)
@@ -123,5 +123,5 @@ No formal test suite exists. Test manually by:
 2. Opening browser to `localhost:3006`
 3. Resizing viewport to cross the breakpoint
 4. Checking network tab to confirm only one video loads (and one poster if provided)
-5. Verifying `data-active-mode` attribute updates correctly
+5. Verifying `mode` attribute updates correctly
 6. Inspecting the `<video>` element to confirm both `src` and `poster` attributes swap correctly

@@ -1,6 +1,6 @@
 {
   "name": "@magic-spells/responsive-video",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Responsive video and poster image swapping web component.",
   "author": "Cory Schulz",
   "license": "MIT",
